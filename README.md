@@ -111,3 +111,24 @@
 - Time.time을 사용해서 트리거 충돌 간에 딜레이 추가
 - 코루틴을 사용하여 트리거 충돌이 일어나면 Enemy.Material의 색상이 Red로 변했다가 원래 색상으로 돌아온다.
 - 플레이어의 현재 체력, 최대 체력, 걷는 속도, 달리는 속도, 현재 경험치, 최대 경험치, 현재 돈, 최대 돈 변수 추가
+
+## 5주차
+- NavMeshAgent를 사용하여 Enemy가 Player를 목표로 이동
+- Enemy Object 앞으로 정해진 거리의 Ray를 발사하여 Player와 hit하면 정해진 공격 속도와 공격력에 맞는 데미지를 입힘
+- Transform.LookAt을 사용하여 Enemy가 Player를 바라보도록 제작
+
+## 6주차
+- Enemy의 공격 및 사망 애니메이션 추가
+- Enemy가 데미지를 입을시 Material의 색상변경에서 Particle System을 이용한 피격 이펙트로 변경
+- UI > Slider 를 이용한 Enemy의 체력게이지 제작
+- Material에 ToonShader 적용
+- Item Object의 상하 움직임 애니메이션 추가
+- Item.HealUp 오브젝트의 효과 추가 : 플레이어의 최대 체력 20% 회복
+- Item.SpeedUp 오브젝트의 효과 추가 : 10초동안 플레이어의 현재 이동속도의 50%증가
+- Canvas > UI > Slider를 사용한 플레이어의 체력바 추가
+- 플레이어의 일반 공격 애니메이션 재생시 Trail Renderer 대신 Texture를 이용한 검기 이펙트 제작
+- Enemy의 공격 판정을 무기 오브젝트의 트리거에서 검기 이펙트의 MeshCollider트리거로 변경
+- 애니메이션에서 트리거 활성화를 제어해 공격 애니메이션이 재생중이지 않을 떄도 공격이 되던 오류 수정
+- 공격 애니메이션 재생중에는 캐릭터가 이동하지 못하도록 수정
+- 일반 공격으로 적을 공격시 피격 사운드 재생
+- 타이틀, 기본 맵, 전투맵 Scene 제작
